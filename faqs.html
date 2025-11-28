@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQs — Callous Solutions</title>
+
+  <!-- Same font + CSS as other pages -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+
+  <style>
+    .faq-item {
+      background:#0f172a;
+      padding:16px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      margin-bottom:10px;
+      cursor:pointer;
+    }
+    .faq-question {
+      font-weight:600;
+    }
+    .faq-answer {
+      display:none;
+      margin-top:8px;
+      color:var(--muted);
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="Images/logo.webp" alt="Callous Solutions logo" class="logo" />
+      <h1>Callous Solutions</h1>
+    </div>
+    <nav class="menu" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="phone.html">Phone</a>
+      <a href="laptop.html">Laptop</a>
+      <a href="router.html">Router</a>
+      <a href="services.html">Services</a>
+      <a href="accessories.html">Accessories</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faqs.html">FAQs</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container main">
+
+  <section class="hero">
+    <h2>Frequently Asked Questions</h2>
+    <p class="muted">Find answers to our most common questions.</p>
+  </section>
+
+  <section>
+    <div class="faq-item">
+      <div class="faq-question">Are your devices encrypted?</div>
+      <div class="faq-answer">Yes, all devices ship with full-disk encryption enabled by default.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you offer returns?</div>
+      <div class="faq-answer">We offer a 30-day return window with no questions asked.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How often do devices receive updates?</div>
+      <div class="faq-answer">Security updates are issued monthly or as needed.</div>
+    </div>
+  </section>
+
+</main>
+
+<footer>© <span id="year"></span> Callous Solutions</footer>
+
+<script src="js/main.js"></script>
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const ans = item.querySelector('.faq-answer');
+      ans.style.display = ans.style.display === "block" ? "none" : "block";
+    });
+  });
+</script>
+
+</body>
+</html>

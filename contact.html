@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Callous Solutions</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <div class="brand">
+      <img src="Images/logo.webp" class="logo" alt="Callous Solutions logo" />
+      <h1>Callous Solutions</h1>
+    </div>
+
+    <nav class="menu" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="phone.html">Phone</a>
+      <a href="laptop.html">Laptop</a>
+      <a href="router.html">Router</a>
+      <a href="services.html">Services</a>
+      <a href="accessories.html">Accessories</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="faqs.html">FAQs</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container main">
+
+  <!-- Hero / intro -->
+  <section class="hero">
+    <h2>Contact us</h2>
+    <p class="muted">
+      Have a question about devices, orders or support? Send us a message and we&#39;ll get back to you.
+    </p>
+  </section>
+
+  <!-- Two-column layout: form + info -->
+  <section class="contact-grid">
+    <!-- Left: form -->
+    <div class="contact-card">
+      <form id="contact-form" class="contact-form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+
+        <div class="field">
+          <label for="subject">Subject</label>
+          <input id="subject" name="subject" type="text" required />
+        </div>
+
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn black">Send message</button>
+      </form>
+    </div>
+
+    <!-- Right: info -->
+    <aside class="contact-side">
+      <h3>How we respond</h3>
+      <p class="muted">
+        We usually reply within one business day. For order-related questions, include your order ID if you have it.
+      </p>
+
+      <ul class="contact-list">
+        <li><strong>Email</strong><br>support@callous.solutions</li>
+        <li><strong>Hours</strong><br>Mon–Fri, 9:00–17:00 (UK time)</li>
+        <li><strong>What we can help with</strong><br>Orders, device setup, security questions, returns.</li>
+      </ul>
+    </aside>
+  </section>
+
+</main>
+
+<footer>© <span id="year"></span> Callous Solutions</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
