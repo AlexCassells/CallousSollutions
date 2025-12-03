@@ -5,156 +5,277 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Callous Solutions — Secure Devices</title>
 
-  <meta name="description" content="Phones, laptops, and routers focused on privacy and security." />
+  <meta
+    name="description"
+    content="Phones, laptops, and routers focused on privacy and security."
+  />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <link rel="stylesheet" href="CSS/styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="CSS/styles.css" />
 </head>
 
 <body>
+  <!-- ========== NAVBAR ========== -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="Images/logo.png" alt="Callous Solutions logo" class="logo" />
+        <h1>Callous Solutions</h1>
+      </div>
 
-<!-- ========== NAVBAR ========== -->
-<header>
-  <div class="container nav">
-    <div class="brand">
-      <img src="Images/logo.webp" alt="Callous Solutions logo" class="logo" />
-      <h1>Callous Solutions</h1>
+      <nav class="menu" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="phone.html">Phone</a>
+        <a href="laptop.html">Laptop</a>
+        <a href="router.html">Router</a>
+        <a href="services.html">Services</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="faqs.html">FAQs</a>
+      </nav>
+
+      <div class="actions">
+        <a href="#products" class="btn black">Shop</a>
+      </div>
     </div>
+  </header>
 
-    <nav class="menu" aria-label="Main">
-      <a href="phone.html">Phone</a>
-      <a href="laptop.html">Laptop</a>
-      <a href="router.html">Router</a>
-      <a href="services.html">Services</a>
-      <a href="accessories.html">Accessories</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="faqs.html">FAQs</a>
-    </nav>
+  <!-- ========== MAIN ========== -->
+  <main class="container main">
+    <!-- HERO -->
+    <section class="hero">
+      <h2>Callous Ideology</h2>
 
-    <div class="actions">
-      <a href="#products" class="btn black">Shop</a>
-    </div>
-  </div>
-</header>
-
-<!-- ========== MAIN ========== -->
-<main class="container main">
-
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Callous Ideology</h2>
-  
-    <div class="hero-text">
-      <p>Privacy shouldn't be a privilege — it should be a fundamental guarantee. Our mission is to provide secure, transparent, lawful alternatives in a world increasingly dominated by surveillance and control.</p>
-  
-      <p class="subtle">
-        Our devices run on open-source systems built to safeguard what truly matters: your freedom and your data.
+      <p>
+        Privacy shouldn't be a privilege — it should be a fundamental guarantee.
+        Our mission is to provide secure, transparent, lawful alternatives in a
+        world increasingly dominated by surveillance and control.
       </p>
-  
+
       <p class="subtle">
-        We empower individuals with verifiable, user-controlled technology — ensuring information is handled responsibly, securely, and independently.
+        Our devices run on open-source systems built to safeguard what truly
+        matters: your freedom and your data.
       </p>
-  
+
+      <p class="subtle">
+        We empower individuals with verifiable, user-controlled technology —
+        ensuring information is handled responsibly, securely, and
+        independently.
+      </p>
+
       <p class="highlight">
-        For clients requiring advanced assurance, we also provide bespoke network security assessments and tailored privacy solutions.
+        For clients requiring advanced assurance, we also provide bespoke
+        network security assessments and tailored privacy solutions.
       </p>
-    </div>
-  </section>
-  
+    </section>
 
-  <!-- ========== PRODUCT CARDS FIRST ========== -->
-  <section id="products" class="products">
+    <!-- ========== PRODUCT CARDS FIRST ========== -->
+    <section id="products" class="products">
+      <!-- PHONE CARD -->
+      <article class="card">
+        <div class="thumb">📱</div>
+        <div class="content">
+          <div class="title">Callous Phone</div>
+          <p class="muted">Starting from</p>
+          <div class="row">
+            <div>
+              <span class="price">
+                <img
+                  src="Images/Tether.jpeg"
+                  class="tether-icon"
+                  alt="USDT"
+                />
+              </span>
+              $925
+            </div>
+            <button class="btn black">Add to cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- LAPTOP CARD -->
+      <article class="card">
+        <div class="thumb">💻</div>
+        <div class="content">
+          <div class="title">Callous Book</div>
+          <p class="muted">Starting from</p>
+          <div class="row">
+            <div>
+              <span class="price">
+                <img
+                  src="Images/Tether.jpeg"
+                  class="tether-icon"
+                  alt="USDT"
+                />
+              </span>
+              $1200
+            </div>
+            <button class="btn black">Add to cart</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ROUTER CARD -->
+      <article class="card">
+        <div class="thumb">📡</div>
+        <div class="content">
+          <div class="title">Callous Router</div>
+          <p class="muted">Starting from</p>
+          <div class="row">
+            <div>
+              <span class="price">
+                <img
+                  src="Images/Tether.jpeg"
+                  class="tether-icon"
+                  alt="USDT"
+                />
+              </span>
+              $525
+            </div>
+            <button class="btn black">Add to cart</button>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ========== SECURITY KIT BELOW PRODUCTS (centered) ========== -->
     
-    <!-- PHONE CARD -->
-    <div class="card">
-      <div class="thumb">📱</div>
-      <div class="content">
-        <div class="title">Callous phone</div>
-        <p class="muted">Starting from</p>
-        <div class="row">
-          <div>
-            <span class="price">£699</span>
-          </div>
-          <button class="btn black">Add to cart</button>
+
+    <!-- ==========================
+         PHONE FEATURED PRODUCT
+    =========================== -->
+    <section id="phones" class="device-section">
+      <h2>Phones</h2>
+      <p class="muted">
+        *A secure smartphone configured for privacy and everyday use*
+      </p>
+
+      <article class="device-card">
+        <img
+          src="Images/google-pixel.png"
+          alt="Callous secure phone"
+          class="device-image"
+        />
+
+        <h3>Callous Phone</h3>
+        <p class="muted">
+          ................................................
+        </p>
+
+        <ul class="device-specs">
+          <li>...................</li>
+          <li>...................</li>
+          <li>...................</li>
+          <li>...................</li>
+        </ul>
+
+        <div class="device-footer">
+          <span class="price">
+            <img
+              src="Images/Tether.jpeg"
+              class="tether-icon"
+              alt="USDT"
+            />
+          </span>
+          $925
+          <button class="btn black">View details</button>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
 
-    <!-- LAPTOP CARD -->
-    <div class="card">
-      <div class="thumb">💻</div>
-      <div class="content">
-        <div class="title">CallousBook</div>
-        <p class="muted">Starting from</p>
-        <div class="row">
-          <div>
-            <span class="price">£899</span>
-          </div>
-          <button class="btn black">Add to cart</button>
+    <!-- ==========================
+         LAPTOP FEATURED PRODUCT
+    =========================== -->
+    <section id="laptops" class="device-section">
+      <h2>Laptops</h2>
+      <p class="muted">
+        *Work, research and operations on a privacy-first laptop*
+      </p>
+
+      <article class="device-card">
+        <img
+          src="Images/t430.png"
+          alt="Callous secure laptop"
+          class="device-image"
+        />
+
+        <h3>Callous Book</h3>
+        <p class="muted">
+          ............................
+        </p>
+
+        <ul class="device-specs">
+          <li>......................</li>
+          <li>......................</li>
+          <li>......................</li>
+          <li>......................</li>
+        </ul>
+
+        <div class="device-footer">
+          <span class="price">
+            <img
+              src="Images/Tether.jpeg"
+              class="tether-icon"
+              alt="USDT"
+            />
+          </span>
+          $1200
+          <button class="btn black">View details</button>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
 
-    <!-- ROUTER CARD -->
-    <div class="card">
-      <div class="thumb">📡</div>
-      <div class="content">
-        <div class="title">Callous Router</div>
-        <p class="muted">Starting from</p>
-        <div class="row">
-          <div>
-            <span class="price">£399</span>
-          </div>
-          <button class="btn black">Add to cart</button>
+    <!-- ==========================
+         ROUTER FEATURED PRODUCT
+    =========================== -->
+    <section id="routers" class="device-section">
+      <h2>Routers</h2>
+      <p class="muted">
+        *Protect every device on your network with a hardened router*
+      </p>
+
+      <article class="device-card">
+        <img
+          src="Images/router.png"
+          alt="Callous secure router"
+          class="device-image"
+        />
+
+        <h3>Callous Router</h3>
+        <p class="muted">
+          .......................
+        </p>
+
+        <ul class="device-specs">
+          <li>.....................</li>
+          <li>.....................</li>
+          <li>......................</li>
+          <li>.......................</li>
+        </ul>
+
+        <div class="device-footer">
+          <span class="price">
+            <img
+              src="Images/Tether.jpeg"
+              class="tether-icon"
+              alt="USDT"
+            />
+          </span>
+          $525
+          <button class="btn black">View details</button>
         </div>
-      </div>
-    </div>
+      </article>
+    </section>
+  </main>
 
-  </section>
-
-  <!-- ========== SECURITY KIT BELOW PRODUCTS (centered) ========== -->
-  <section class="security-kit">
-    <div class="security-box">
-      <div class="security-icon">📱</div>
-      <h3>Security Kit</h3>
-      <ul>
-        <li>Full-device encryption</li>
-        <li>Full user guide</li>
-        <li>Kill switch</li>
-        <li>12-hour burn</li>
-        <li>VPN included</li>
-      </ul>
-    </div>
-  </section>
-  
-
-  <!-- ========== PHONE SECTION ========== -->
-  <section id="phones">
-    <h2>Phones</h2>
-    <p>........................................</p>
-  </section>
-
-  <!-- ========== LAPTOP SECTION ========== -->
-  <section id="laptops">
-    <h2>Laptops</h2>
-    <p>........................................</p>
-  </section>
-
-  <!-- ========== ROUTER SECTION ========== -->
-  <section id="routers">
-    <h2>Routers</h2>
-    <p>........................................</p>
-  </section>
-
-</main>
-
-<!-- FOOTER -->
-<footer>
-  © 2025 Callous Solutions. All rights reserved.
-</footer>
-
+  <!-- FOOTER -->
+  <footer>
+    © 2025 Callous Solutions. All rights reserved.
+  </footer>
 </body>
 </html>

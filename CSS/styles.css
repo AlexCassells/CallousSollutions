@@ -7,8 +7,8 @@
     --ink: #e5e7eb;
     --muted: #9aa3b2;
     --line: #1a1a1a;
-    --brand: #22c55e;
-    --accent: #38bdf8;
+    --brand: #50af95;      /* Tether green */
+    --accent: #38bdf8;     /* blue accent still for nice contrast */
   }
   
   /* ===========================
@@ -50,6 +50,12 @@
     border-bottom: 1px solid var(--line);
   }
   
+  /* shift logo left + give nav more space */
+  header .container {
+    padding-left: 4px !important;
+    padding-right: 10px !important;
+  }
+  
   .nav {
     display: flex;
     align-items: center;
@@ -63,8 +69,9 @@
     gap: 12px;
   }
   
+  /* slightly smaller so nav fits on one line */
   .logo {
-    height: 70px;
+    height: 110px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -79,11 +86,12 @@
   .menu {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
   }
   
+  /* tighter spacing */
   .menu a {
-    padding: 10px 12px;
+    padding: 8px 10px;
     border-radius: 10px;
     border: 1px solid transparent;
     transition: 0.2s;
@@ -180,7 +188,7 @@
   
   .hero h2 {
     font-size: clamp(28px, 3.2vw, 40px);
-    background: linear-gradient(90deg, #fff, #b6ffe0 35%, #9be5ff 70%, #fff);
+    background: linear-gradient(90deg, #fff, #c7ffe9 35%, #9be5ff 70%, #fff);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -191,39 +199,9 @@
     max-width: 60ch;
     margin-top: 12px;
   }
-
-  /* HERO TEXT IMPROVEMENTS */
-.hero-text {
-  max-width: 70ch;
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.hero-text p {
-  line-height: 1.6;
-  color: var(--ink);
-  font-size: 0.95rem;
-}
-
-/* softer, muted paragraphs */
-.hero-text .subtle {
-  color: var(--muted);
-}
-
-/* standout emphasis paragraph */
-.hero-text .highlight {
-  background: rgba(56,189,248,0.05);
-  border-left: 3px solid var(--accent);
-  padding: 12px 16px;
-  border-radius: 8px;
-  color: var(--ink);
-}
-
   
   /* ===========================
-     SECURITY KIT BLOCK
+     SECURITY KIT
      =========================== */
   .security-kit {
     margin-top: 30px;
@@ -338,13 +316,12 @@
     text-align: center;
   }
   
-  /* Ensure images inside thumb look good (placeholders / real images) */
   .thumb img {
     width: 110px;
     height: 110px;
     object-fit: contain;
     filter: drop-shadow(0 20px 30px rgba(0,0,0,.35));
-    opacity: 0.7; /* subtle for placeholders */
+    opacity: 0.7;
   }
   
   .content {
@@ -364,15 +341,19 @@
     color: var(--muted);
   }
   
+  /* Tether price style uses brand + accent */
   .price {
     font-weight: 800;
     font-size: 22px;
-    background: linear-gradient(90deg, rgba(34,197,94,.18), rgba(56,189,248,.18));
-    border: 1px solid rgba(56,189,248,.25);
+    background: linear-gradient(90deg, rgba(80,175,149,.22), rgba(56,189,248,.18));
+    border: 1px solid rgba(80,175,149,.55);
     padding: 4px 10px;
     border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
   }
   
+  /* old price */
   .strikethrough {
     opacity: .65;
     margin-right: 8px;
@@ -384,6 +365,7 @@
     justify-content: space-between;
   }
   
+  /* “Most popular” badges etc. */
   .badge {
     position: absolute;
     top: 10px;
@@ -393,9 +375,19 @@
     letter-spacing: .3px;
     padding: 6px 10px;
     border-radius: 999px;
-    background: rgba(56,189,248,.18);
-    border: 1px solid rgba(56,189,248,.35);
+    background: rgba(80,175,149,.25);
+    border: 1px solid rgba(80,175,149,.7);
     backdrop-filter: blur(6px);
+  }
+  
+  /* Tether icon */
+  .tether-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    margin-right: 6px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(80,175,149,0.7);
   }
   
   /* ===========================
@@ -457,28 +449,6 @@
     color: var(--muted);
     line-height: 1.5;
   }
-
-  /* ---------------- service page cs */
-
-  /* SERVICE CARD ICONS */
-.service-card {
-  text-align: center;
-}
-
-.service-icon {
-  font-size: 50px;
-  margin-bottom: 12px;
-  background: #0b1326;
-  border: 1px solid var(--line);
-  width: 70px;
-  height: 70px;
-  display: grid;
-  place-items: center;
-  border-radius: 14px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
   
   /* ===========================
      CONTACT PAGE
@@ -565,7 +535,6 @@
   /* ===========================
      RESPONSIVE BREAKPOINTS
      =========================== */
-  
   @media (max-width: 980px) {
     .card {
       grid-column: span 6;
@@ -587,4 +556,128 @@
       grid-column: span 12;
     }
   }
+
+ 
+
+/* ===========================
+   DEVICE SECTIONS (Vertical Catalogue)
+   =========================== */
+
+   .device-section {
+    margin-top: 50px;
+    text-align: center;         /* Center heading + description */
+  }
+  
+  .device-section h2 {
+    margin-bottom: 12px;
+  }
+  
+  .device-section p.muted {
+    margin-bottom: 25px;
+    color: var(--muted);
+  }
+  
+  /* CARD CONTAINER */
+  .device-card {
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;             /* Center the card */
+    padding: 28px;
+    border-radius: 18px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    box-shadow: 0 8px 20px rgba(0,0,0,.35);
+    text-align: center;         /* Center everything IN the card */
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* BIG PRODUCT IMAGE */
+  .device-image {
+    width: 80%;
+    max-width: 320px;
+    height: auto;
+    margin: 0 auto;             /* Center image */
+    display: block;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,.4));
+  }
+  
+  /* SPECS LIST */
+  .device-specs {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    color: var(--muted);
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;        /* Center each line */
+  }
+  
+  /* FOOTER (PRICE + BUTTON) */
+  .device-footer {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;        /* Center the button + price */
+  }
+  
+  .device-footer .price {
+    font-weight: 800;
+    font-size: 22px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(56,189,248,.15);
+    padding: 6px 14px;
+    border-radius: 999px;
+    border: 1px solid rgba(56,189,248,.25);
+  }
+  
+  .tether-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+  }   
+
+
+
+
+  /* ===========================
+   DEVICE SECTION BACKGROUND GLOW
+   =========================== */
+
+.device-section {
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 80px;
+}
+
+.device-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      800px 300px at 50% 0%,
+      rgba(56,189,248,0.08),
+      transparent
+    ),
+    radial-gradient(
+      700px 260px at 50% 30%,
+      rgba(34,197,94,0.06),
+      transparent
+    );
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+.device-card {
+  position: relative;
+  z-index: 1; /* Makes sure the card sits above the glow */
+}
+
   
