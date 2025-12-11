@@ -15,7 +15,6 @@
   <div class="container nav">
     <div class="brand">
       <img src="Images/logo.png" class="logo" alt="Callous Solutions logo" />
-      <h1>Callous Solutions</h1>
     </div>
 
     <nav class="menu">
@@ -27,11 +26,13 @@
       <a href="accessories.html">Accessories</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="faqs.html">FAQs</a>
     </nav>
 
     <div class="actions">
-      <a href="#products" class="btn black">Shop</a>
+      <a href="cart.html" class="btn black">
+        Cart <span id="cart-count" class="cart-count">0</span>
+      </a>
+      
     </div>
   </div>
 </header>
@@ -42,7 +43,37 @@
   <section class="hero shop-hero">
     <h2>Shop Phones</h2>
     <p class="muted">Encrypted, secure, privacy-first smartphones.</p>
+  
+    <div class="hero-row">
+      <div class="hero-media">
+        <img
+          src="Images/google-pixel.png"
+          alt="Callous secure phone"
+          class="hero-image"
+        />
+      </div>
+  
+      <div class="hero-info">
+        <h3>Callous Phone</h3>
+        <p class="muted">
+          A hardened smartphone configured for privacy and everyday use — no
+          hidden tracking, no unnecessary bloat.
+        </p>
+  
+        <ul class="hero-specs">
+          <li>Full-device encryption</li>
+          <li>Always-on VPN</li>
+          <li>Hardware kill-switch</li>
+          <li>12-hour burn workflow</li>
+          <li>Minimal, audited app stack</li>
+        </ul>
+  
+      </div>
+    </div>
   </section>
+  
+  
+  
 
   <!-- PRODUCT GRID -->
   <section class="products">
@@ -60,38 +91,16 @@
              </span>
              $925
           </div>
-          <button 
-            class="btn black add-to-cart"
-            data-id="phone1" 
-            data-name="Callous One"
-            data-price="699">
-            Add to Cart
+          <button class="btn black" onclick="addToCart('phone')">
+            Add to cart
           </button>
+          
         </div>
       </div>
     </div>
 
-    <!-- PRODUCT 2 -->
-    <div class="card">
-      <div class="thumb">📱</div>
-      <div class="content">
-        <div class="title">Callous Phone Pro</div>
-        <p class="muted">Starting From</p>
-        <div class="row">
-          <div>
-            <span class="price"><img src="Images/Tether.jpeg" class="tether-icon" alt="USDT"> </span>
-            $
-          </div>
-          <button 
-            class="btn black add-to-cart"
-            data-id="phone2" 
-            data-name="Callous One Pro"
-            data-price="899">
-            Add to Cart
-          </button>
-        </div>
-      </div>
-    </div>
+    
+    
 
   </section>
 
@@ -101,6 +110,7 @@
   © 2025 Callous Solutions. All rights reserved.
 </footer>
 
-<script src="js/main.js"></script>
+<script src="JAVASCRIPT/cart.js"></script>
+
 </body>
 </html>

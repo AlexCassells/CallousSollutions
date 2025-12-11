@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cart — Callous Solutions</title>
+  <link rel="stylesheet" href="CSS/styles.css" />
+</head>
+
+<body>
+  <!-- NAVBAR (same as other pages, including Cart link) -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <img src="Images/logo.png" alt="Callous Solutions logo" class="logo" />
+      </div>
+
+      <nav class="menu" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a href="phone.html">Phone</a>
+        <a href="laptop.html">Laptop</a>
+        <a href="router.html">Router</a>
+        <a href="services.html">Services</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <a href="cart.html" class="btn black">
+          Cart <span id="cart-count" class="cart-count">0</span>
+        </a>
+        
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CART AREA -->
+  <main class="container main">
+    <section class="hero">
+      <h2>Your cart</h2>
+      <p class="muted">
+        Review your items before proceeding to crypto payment.
+      </p>
+    </section>
+
+    <section class="cart-section">
+      <!-- Empty state -->
+      <div id="cart-empty">
+        <p class="muted">Your cart is empty.</p>
+        <a href="index.html#products" class="btn black">Browse products</a>
+      </div>
+
+      <!-- Filled state -->
+      <div id="cart-filled" class="cart-panel" style="display:none;">
+        <div>
+          <h3>Items</h3>
+          <div id="cart-items"></div>
+        </div>
+
+        <div class="cart-summary">
+          <h3>Summary</h3>
+          <p class="muted">Total (in USDT equivalent)</p>
+          <div class="cart-total">
+            <img src="Images/Tether.jpeg" class="tether-icon" alt="USDT" />
+            <span id="cart-total-amount">0</span>
+          </div>
+
+          <button class="btn black" id="checkout-btn">
+            Pay with Crypto
+          </button>
+
+          <p class="muted" style="margin-top:8px; font-size:0.85rem;">
+            You’ll be redirected to our secure crypto payment page.  
+            Please use the total shown above when completing payment.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Callous Solutions. All rights reserved.
+  </footer>
+
+  <script src="js/cart.js"></script>
+</body>
+</html>
