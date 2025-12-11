@@ -722,6 +722,7 @@
   flex-direction: column;
   gap: 10px;
   text-align: left;
+  margin-top: 50px;
 }
 
 .shop-hero .hero-specs {
